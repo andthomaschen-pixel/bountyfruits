@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bounty Fruits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ef;--ink:#10301f;--muted:#4d6455;--pink:#e8344e;--lime:#c6ea4f;--card:#ffffff;--line:#e5dccb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1f17;--ink:#f6f1e4;--muted:#b3c4b8;--card:#17302330;--line:#2a4535}}
+:root[data-theme="dark"]{--bg:#0f1f17;--ink:#f6f1e4;--muted:#b3c4b8;--card:#17302330;--line:#2a4535}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Black",sans-serif;line-height:1.02;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav b{font:800 22px "Bricolage Grotesque",sans-serif}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;margin-left:20px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;padding:30px 0 70px}
+.hero h1{font-size:clamp(46px,9vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero p{max-width:30em;color:var(--muted);margin:22px 0 28px}
+.btn{display:inline-block;background:var(--pink);color:#fff;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.crate{position:relative;aspect-ratio:1;max-width:380px;width:100%;justify-self:center}
+.crate i{position:absolute;border-radius:50%;display:block}
+section{padding:50px 0}
+section h2{font-size:clamp(32px,5vw,50px);font-weight:800;margin-bottom:28px;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}
+.dot{height:130px;border-radius:16px;display:grid;place-items:center;margin-bottom:14px}
+.dot i{width:78px;height:78px;border-radius:50%;display:block}
+.item h3{font-size:22px;font-weight:500}
+.item p{margin:6px 0 10px;color:var(--muted);font-size:15px}
+.price{font-weight:500}
+.band{background:var(--ink);color:var(--bg);border-radius:30px;padding:46px 34px;display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.band h3{font-size:24px;margin-bottom:6px;color:var(--lime)}
+.band p{margin:0;opacity:.85;font-size:15px}
+footer{padding:50px 0 40px;color:var(--muted);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.crate{max-width:260px}nav a{margin-left:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Bounty Fruits</b><div><a href="#picks">Shop</a><a href="#why">Why us</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>Fruit picked for your week.</h1>
+<p>Ripe, seasonal fruit sorted by hand and delivered to your door. Order a box, a bag, or a gift crate.</p>
+<a class="btn" href="#picks">Shop this week's fruit</a>
+</div>
+<div class="crate" aria-hidden="true">
+<i style="width:62%;height:62%;left:0;top:8%;background:var(--pink)"></i>
+<i style="width:46%;height:46%;right:0;top:0;background:var(--lime)"></i>
+<i style="width:50%;height:50%;right:6%;bottom:0;background:#ff9a3c"></i>
+<i style="width:26%;height:26%;left:34%;bottom:4%;background:#7b3fa0"></i>
+</div>
+</header>
+
+<section id="picks">
+<h2>This week's picks</h2>
+<div class="grid">
+<div class="item"><div class="dot" style="background:#fde3e6"><i style="background:var(--pink)"></i></div><h3>Strawberry box</h3><p>Sweet and juicy, 2 lb.</p><span class="price">$12.00 CAD</span></div>
+<div class="item"><div class="dot" style="background:#fff0d9"><i style="background:#ff9a3c"></i></div><h3>Navel oranges</h3><p>Easy to peel, 5 lb bag.</p><span class="price">$10.50 CAD</span></div>
+<div class="item"><div class="dot" style="background:#f2fbd0"><i style="background:#8fc41f"></i></div><h3>Green apples</h3><p>Crisp and tart, 4 lb bag.</p><span class="price">$9.00 CAD</span></div>
+<div class="item"><div class="dot" style="background:#ece0f5"><i style="background:#7b3fa0"></i></div><h3>Blueberry pint</h3><p>Plump and sweet, 1 pint.</p><span class="price">$7.50 CAD</span></div>
+</div>
+</section>
+
+<section id="why">
+<div class="band">
+<div><h3>Sorted by hand</h3><p>Every piece is checked before it goes in the box.</p></div>
+<div><h3>Seasonal first</h3><p>We stock what's ripe now, so it tastes better.</p></div>
+<div><h3>Delivered local</h3><p>Order by Thursday for weekend delivery.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Gift crates and bulk orders</h2>
+<p style="max-width:34em;color:var(--muted);margin:0 0 22px">Need fruit for an office, event, or gift? Tell us what you need and we'll put a crate together.</p>
+<a class="btn" href="mailto:nfc.vendorbc@gmail.com">Email us</a>
+</section>
+
+<footer><span>Bounty Fruits</span><span>Demo page. Prices and products are placeholders.</span></footer>
+</div>
+</body>
+</html>
